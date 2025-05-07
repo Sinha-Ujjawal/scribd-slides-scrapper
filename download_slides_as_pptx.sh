@@ -1,5 +1,7 @@
 #!/bin/bash
 
+set -xe
+
 usage() {
     echo "Usage: $0 <url> <out> [workers: (default 4)] [scale: (default 0.5)]"
 }
