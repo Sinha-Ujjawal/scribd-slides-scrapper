@@ -2,6 +2,7 @@ import subprocess
 import tempfile
 import os
 import logging
+import sys
 import streamlit as st
 
 def render_errors():
@@ -29,6 +30,9 @@ def download_pptx(slideshare_url, scale):
                 stdout=subprocess.PIPE,
                 stderr=subprocess.STDOUT,
                 text=True,
+                env={
+                    "PYTHON_EXEC": sys.executable,
+                },
             )
 
             logs = []

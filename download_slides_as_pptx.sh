@@ -2,6 +2,10 @@
 
 set -xe
 
+if [[ -z "$PYTHON_EXEC" ]]; then
+    PYTHON_EXEC=python3
+fi
+
 usage() {
     echo "Usage: $0 <url> <out> [scale: (default 0.5)] [workers: (default 4 )]"
 }
@@ -39,8 +43,8 @@ if [[ -z "$out" ]]; then
 fi
 
 tempdir=$(mktemp -d)
-python3 $SCRIPT_DIR/download_slides_as_images.py --url "$url" --out "$tempdir" --max-workers $max_workers
+$PYTHON_EXEC $SCRIPT_DIR/download_slides_as_images.py --url "$url" --out "$tempdir" --max-workers $max_workers
 find $tempdir -type f -name "*.webp" | \
     sort -t '-' -k 3 -n | \
-    xargs python3 $SCRIPT_DIR/images_to_pptx.py --out "$out" --scale $scale --max-workers $max_workers --image-paths
+    xargs $PYTHON_EXEC $SCRIPT_DIR/images_to_pptx.py --out "$out" --scale $scale --max-workers $max_workers --image-paths
 rm -rf $tempdir
