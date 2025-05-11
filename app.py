@@ -26,7 +26,7 @@ def download_pptx(slideshare_url, scale):
             script_path = './download_slides_as_pptx.sh'
 
             process = subprocess.Popen(
-                ["sh", script_path, slideshare_url, output_path, str(scale)],
+                ["bash", script_path, slideshare_url, output_path, str(scale)],
                 stdout=subprocess.PIPE,
                 stderr=subprocess.STDOUT,
                 text=True,
