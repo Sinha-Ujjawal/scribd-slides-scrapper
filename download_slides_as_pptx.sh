@@ -3,7 +3,7 @@
 set -xe
 
 usage() {
-    echo "Usage: $0 <url> <out> [workers: (default 4)] [scale: (default 0.5)]"
+    echo "Usage: $0 <url> <out> [scale: (default 0.5)] [workers: (default 4 )]"
 }
 
 if [[ "$1" == "help" ]]; then
@@ -13,8 +13,8 @@ fi
 
 url="$1"
 out="$2"
-max_workers=$3
-scale=$4
+scale=$3
+max_workers=$4
 
 if [[ -z "$max_workers" ]]; then
     max_workers=4

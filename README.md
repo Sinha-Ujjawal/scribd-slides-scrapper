@@ -50,7 +50,7 @@ This is a helper shell script that uses above two scripts to download the slides
 
 ```console
 > sh download_slides_as_pptx.sh help
-Usage: download_slides_as_pptx.sh <url> <out> [workers: (default 4)]
+Usage: download_slides_as_pptx.sh <url> <out> [scale: (default 0.5)] [workers: (default 4 )]
 ```
 
 ## Copyright
