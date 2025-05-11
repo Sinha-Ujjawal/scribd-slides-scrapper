@@ -1,5 +1,5 @@
 # Helper python/shell scripts to download slides from [slideshare](https://www.slideshare.net/)
-This repository contains python/shell helper scripts to download slides from [slideshare](https://www.slideshare.net/) as [webp](https://en.wikipedia.org/wiki/WebP) images and save it as a [pptx](https://en.wikipedia.org/wiki/Microsoft_PowerPoint) file.
+This repository contains python/shell helper scripts to download slides from [slideshare](https://www.slideshare.net/) as [webp](https://en.wikipedia.org/wiki/WebP) images and save it as a [pptx](https://en.wikipedia.org/wiki/Microsoft_PowerPoint) file. Also, there is a [streamlit application](https://scribd-slides-scrapper-chgd7eqnfd9bc5dyaa9qhj.streamlit.app/) for the same.
 
 ## Getting Started
 
